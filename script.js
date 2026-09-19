@@ -74,7 +74,7 @@ navLinks.querySelectorAll("a").forEach(link => {
 const photoCandidates = [
   "assets/photo.jpg", "assets/photo.jpeg", "assets/photo.png", "assets/photo.webp",
   "assets/Photo.jpg", "assets/Photo.jpeg", "assets/Photo.png",
-  "assets/photo.JPG", "assets/photo.PNG" , "assets/photo.jpg.jpeg" 
+  "assets/photo.JPG", "assets/photo.PNG"
 ];
 const profilePhoto = document.getElementById("profilePhoto");
 const photoFallback = document.getElementById("photoFallback");
