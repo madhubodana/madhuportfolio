@@ -477,10 +477,11 @@ img{ max-width: 100%; display: block; }
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   z-index: 200;
 }
-.nav-links.open{
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
+.nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    height: 100vh;
 }
 .nav-links a{ font-size: 20px; }
 .nav-close{
