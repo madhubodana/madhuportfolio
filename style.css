@@ -441,6 +441,12 @@ img{ max-width: 100%; display: block; }
     transition: transform 0.3s ease;
     overflow-y: auto;
   }
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    height: 100vh;
+}
   .nav-links.open{ transform: translateX(0); }
   .nav-links a{ font-size: 18px; }
   .nav-resume{ margin-top: 8px; }
