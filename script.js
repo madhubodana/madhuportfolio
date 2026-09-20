@@ -55,19 +55,25 @@ projects.forEach(p => {
   projectsGrid.appendChild(card);
 });
 
-// ===== Mobile nav toggle =====
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", isOpen);
-});
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
-});
+const navClose = document.getElementById("navClose");
+
+function openMenu(){
+  navLinks.classList.add("open");
+  navToggle.setAttribute("aria-expanded", "true");
+  document.body.style.overflow = "hidden";
+}
+function closeMenu(){
+  navLinks.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
+}
+
+navToggle.addEventListener("click", openMenu);
+navClose.addEventListener("click", closeMenu);
+navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
 
 // ===== Profile photo — tries several common filenames/extensions =====
 // Rename your photo to "photo" (any of the extensions below) and drop it in /assets.
